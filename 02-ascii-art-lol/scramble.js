@@ -1,20 +1,34 @@
 (function () {
-  let orig = document.getElementById('dolla-bill');
-  let lines = orig.innerHTML.split('\n');
+
+  //get the original ascii are to be displayed from the html
+  let orig = document.querySelector('#dolla-bill');
+
+  //split the ascii art inserting each line into an array
+  let linesArray = orig.innerHTML.split('\n');
+
+  //empty the hidden div that had the original artwork
   orig.innerHTML = '';
   
-  let yeah = [];
-  
-  lines.forEach(function (line) {
-    yeah.push(line, 'lol'.repeat(40));
-  });
+  //create an empty array
+  let yeahArray = [];
 
-  document.getElementById('fixed').innerHTML = yeah.join('\n');
+  //loop through the linesArray and prepend lol 40x to each line
+  //before adding to the new line yeahArray
+  for(let i=0; i < linesArray.length; i++){
+    yeahArray.push(linesArray[i], 'lol'.repeat(40));
+  }
 
-  window.artArray = yeah;
+  //turn the yeahArray back into a string using the join() function using
+  //the newline character (\n) as the glue and inster it into the element with the
+  //id of fixed
+  document.querySelector('#fixed').innerHTML = yeahArray.join('\n');
+
+  //make artArray and writeAscii availble to the exercise02.js script
+  window.artArray = yeahArray;
   window.writeAscii = writeAscii;
   
+  //function we use in exercise02.js to display our ascii art
   function writeAscii(arr) {
-    document.getElementById('fixed').innerHTML = arr.join('\n');
+    document.querySelector('#fixed').innerHTML = arr.join('\n');
   }
 }());
