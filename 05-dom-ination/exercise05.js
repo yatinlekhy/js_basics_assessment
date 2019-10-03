@@ -20,6 +20,39 @@
 
 (function () {
 
-    //your code here
 
-})();
+    let title = document.querySelector("h1");
+    function changecolor() {
+        if (title.style.color === "red") {
+            title.style.color = "black"
+        }
+        else {
+            title.style.color = "red"
+        }
+    }
+    //your code here
+    title.addEventListener("click", changecolor)
+    console.log(title)
+
+    let paragraphElements = document.querySelectorAll("p");
+    console.log(paragraphElements);
+    
+    (function () {
+        for (let i=0;i<paragraphElements.length;i++){
+
+            paragraphElements[i].innerHTML = paragraphElements[i].innerHTML.replace('Bacon', 'LASER VISION');
+        }
+    })();
+    
+
+    // let word = document.getElementByClass("large-10 columns");
+    // word.innerHTML = word.innerHTML.replace('bacon', 'LASER VISION');
+
+
+
+
+
+
+
+
+})()
