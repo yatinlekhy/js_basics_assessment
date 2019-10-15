@@ -22,7 +22,7 @@
 
   /**
    * this function adds an image to the page
-   * @param {String} name an image filename
+    * @param {String} name an image filename
    */
   function addImage(name) {
     var img = document.createElement('img');

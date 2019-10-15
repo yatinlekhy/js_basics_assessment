@@ -28,13 +28,14 @@
     function fizzBuzz(maxValue) {
         let fizzBuzzString = ""
         for (let i = 1; i <= maxValue; i = i+1) {
-            if (i % 2 === 0) {
+             if (i % 2 === 0 && i % 3 === 0) {
+                fizzBuzzString = fizzBuzzString + "fizzBuzz,"
+             }else if (i % 2 === 0) {
                 fizzBuzzString = fizzBuzzString + "fizz,"
                 // fizzBuzzString += "fizz,"
             } else if (i % 3 === 0) {
                 fizzBuzzString = fizzBuzzString + "buzz,"
-            } else if (i % 2 === 0 && i % 3 === 0) {
-                fizzBuzzString = fizzBuzzString + "fizzBuzz"
+            
             } else {
                 fizzBuzzString = fizzBuzzString + i + ","
             }

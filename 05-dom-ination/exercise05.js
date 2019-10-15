@@ -36,23 +36,51 @@
 
     let paragraphElements = document.querySelectorAll("p");
     console.log(paragraphElements);
-    
+
     (function () {
-        for (let i=0;i<paragraphElements.length;i++){
+        for (let i = 0; i < paragraphElements.length; i++) {
 
             paragraphElements[i].innerHTML = paragraphElements[i].innerHTML.replace('Bacon', 'LASER VISION');
         }
     })();
-    
+
 
     // let word = document.getElementByClass("large-10 columns");
     // word.innerHTML = word.innerHTML.replace('bacon', 'LASER VISION');
 
+    // (function () {
+    //     var x = document.querySelectorAll(".post p ");
+    //     // if (x.length-1 > 0) {
+    //     //   x.remove(x.length-1);
+    //     // }
+
+    //   })();
+
+    (function () {
+        let imagesIFound = document.querySelectorAll(".hide-for-small p img")
+
+        for (let image of imagesIFound) {
+            image.remove()
+        }
+    })();
+
+    (function () {
+        let postArray = document.querySelectorAll(".post")
+        
+        let lastIndex = postArray.length -1
+
+        postArray[lastIndex].remove()
+        
+        console.log (postArray)
+        let last_Index = postArray.length -2
+        postArray[last_Index].remove ()
+
+            
+        // for (let p of x) {
+        //     p.remove(nth - last - of - type(2))
+        // }
+    })();
 
 
 
-
-
-
-
-})()
+})();

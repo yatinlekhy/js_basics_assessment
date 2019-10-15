@@ -15,5 +15,14 @@
 
 //your code here
 
+let newTitle = document.querySelector("#title");
+let freshTitle = "Goodbye World";
+
+
+
+function changeTitle (){
+    newTitle.innerHTML = freshTitle;
+}
+setTimeout(changeTitle, 3000);
 })();
     
