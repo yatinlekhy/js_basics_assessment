@@ -24,6 +24,7 @@
    * this function adds an image to the page
     * @param {String} name an image filename
    */
+
   function addImage(name) {
     var img = document.createElement('img');
     img.src = name;
@@ -31,5 +32,28 @@
   }
 
   //your code here
+  let imageStringArray = [
+    "cats.jpg",
+    "hugger.jpg",
+    "internet.jpg",
+    "jackson.jpg",
+    "washington.jpg"
+  ]
+
+
+  function setImage() {
+    let randomNumber = Math.floor(Math.random() * Math.floor(5));
+    addImage(imageStringArray[randomNumber]);
+
+  }
+
+  function myTimeoutFunction() {
+    setImage()
+    setTimeout(myTimeoutFunction, 2500);
+  }
+
+  myTimeoutFunction();
+  // setTimeout(setImage,2500);
+
 
 })();
