@@ -44,7 +44,20 @@
         }
     })();
 
+    (function(){
+        let link = document.querySelectorAll(".panel h5")
+        for (let i =0; i < link.length; i++){
+            if (i % 2 !== 0){
 
+            }else {
+                link[i].style.display="none"
+
+            }
+
+        }
+
+    })();
+    
     // let word = document.getElementByClass("large-10 columns");
     // word.innerHTML = word.innerHTML.replace('bacon', 'LASER VISION');
 
